@@ -33,7 +33,7 @@ export default function Contact() {
         <h1>Let's Connect!</h1>
         <p>
           just want to say hello?
-          Drop a message and I’ll get back to you.
+          <br></br>Drop a message and I’ll get back to you.
         </p>
 
         <div className="contact-cards">

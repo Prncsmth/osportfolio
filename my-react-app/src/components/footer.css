@@ -1,7 +1,8 @@
 .site-footer {
-  background: linear-gradient(135deg, #0d001a, #3b0066);
+  background: white;
     padding: 40px 20px;
   font-family: sans-serif;
+ 
 }
 
 .footer-container {
@@ -15,8 +16,8 @@
 /* Location icon & text */
 .footer-col svg,
 .footer-col p {
-  color: #b471ff;   /* applies to stroke for SVG and text color */
-  fill: #b471ff;    /* fills the SVG if it has fill */
+  color: black;   /* applies to stroke for SVG and text color */
+  fill: black;    /* fills the SVG if it has fill */
   vertical-align: middle; /* aligns with text nicely */
   margin-right: 6px; /* spacing between icon and text */
 }
@@ -29,12 +30,12 @@
 }
 
 .footer-col h4 {
-  color: #b471ff;
+  color: black;
   margin-bottom: 10px;
   font-size: 1.2rem;
   text-decoration: none;  
-  stroke: #b471ff;   /* outline icons */
-  fill: #b471ff;     /* filled icons */
+  stroke: black;   /* outline icons */
+  fill: black;     /* filled icons */
   margin-right: 100px;
   margin-top: 10px;
 
@@ -54,7 +55,7 @@
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  color: #ddd;
+  color: black;
   text-decoration: none;
   gap: 8px;
   
@@ -72,12 +73,12 @@
   height: 20px;
 font-size: medium;
  
-  color: #b471ff;
+  color: black;
   
   
 }
 .footer-contact a {
-  color: #b471ff; 
+  color: black; 
   text-decoration: none;  
   stroke: #b471ff;   /* outline icons */
   fill: #b471ff;     /* filled icons */
@@ -111,5 +112,5 @@ font-size: medium;
   text-align: center;
   margin-top: 30px;
   font-size: 0.9rem;
-  color: #b471ff;
+  color: black;
 }

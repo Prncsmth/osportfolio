@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   padding: 20px 0;
-  background: rgba(13, 0, 13, 0.4);
+  background: white;
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
@@ -18,7 +18,7 @@
 }
 
 .nav-logo {
-  color: #b266ff;
+  color: black;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -29,7 +29,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
