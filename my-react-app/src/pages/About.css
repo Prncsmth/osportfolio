@@ -1,0 +1,31 @@
+
+.about-text {
+  flex: 1;
+  margin-right: 50px;
+  text-align: center;
+  font-display: block;
+  margin-left: 6%;
+  font-style: italic;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px; 
+  text-align: center;
+  color: #b471ff;
+  
+}
+p   { 
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: white;
+  text-align: left;
+font-style: normal;
+}
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6%;
+  
+}

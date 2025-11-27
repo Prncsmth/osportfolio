@@ -1,0 +1,57 @@
+.socials-page {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0d001a, #3b0066);
+  color: white;
+  text-align: center;
+}
+
+
+.socials-title {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.socials-subtext {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.socials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.social-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.social-card:hover {
+  transform: scale(1.05);
+  background: #b300ff;
+  border-color: #b300ff;
+  
+}
+
+.social-card h3 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.social-card p {
+  font-size: 14px;
+  opacity: 0.8;
+}
