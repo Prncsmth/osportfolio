@@ -2,14 +2,14 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "“Building Reusable React Components Using Props and List Rendering”",
+    title: "Building Reusable React Components Using Props and List Rendering",
     description: "This project teaches how to create reusable React components that get their data from props. You’ll store multiple items in an array and use .map() to display them. It’s a practical way to learn how real websites show lists of products, posts, or users.",
     tags: ["React", "JavaScript","CSS","GitHub"],
     img: "/public/princesmith.jpg",
     link: "https://github.com/Prncsmth/3a-apps-dev",
   },
   {
-    title: "“React E-Commerce Web Application Using DummyJSON API”",
+    title: "React E-Commerce Web Application Using DummyJSON API",
     description: "This project requires building a React-based online shop that gets product data from the DummyJSON API. Users should be able to view all products, open a product’s details, use search and filters, and manage a cart up to checkout.",
     tags: ["React", "JavaScript", "JSX", "CSS (or Tailwind)", "API", "GitHub", "Vercel"],
     img: "/public/rcs.jpg",
@@ -29,7 +29,7 @@ export default function Projects() {
     <div className="projects-wrapper">
       <h1 className="projects-heading">CHECK OUT MY RECENT PROJECTS</h1>
       <p className="projects-sub">
-        Interfaces for brands, schools, and culture.
+        I've worked on various projects — from simple websites to fully functional web applications. Here are a few favorites.
       </p>
 
       <div className="projects-list">
@@ -37,8 +37,7 @@ export default function Projects() {
           <div key={index} className="project-feature-card">
             {/* LEFT SIDE (TEXT) */}
             <div className="project-text">
-              <span className="project-dot"></span>
-              <span className="project-role">Lead Designer & Developer</span>
+              
 
               <h2 className="project-title">{proj.title}</h2>
               <p className="project-description">{proj.description}</p>

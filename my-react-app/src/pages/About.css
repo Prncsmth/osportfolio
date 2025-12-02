@@ -98,6 +98,11 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: flex-start;
+  
 }
 
 .resume-btn:hover {

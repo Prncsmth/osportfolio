@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Socials from "./pages/Socials";
 import Contact from "./pages/Contact";
+import CpuScheduling from "./pages/CpuScheduling";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/socials" element={<Socials />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/cpu-scheduling" element={<CpuScheduling />} />
+
           </Routes>
         </main>
 
