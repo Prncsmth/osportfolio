@@ -2,14 +2,21 @@ import React, { useState } from "react";
 import "./CpuScheduling.css";
 
 export default function CPUScheduling() {
+  const [algorithm, setAlgorithm] = useState("FCFS");
   const [processName, setProcessName] = useState("");
   const [arrivalTime, setArrivalTime] = useState("");
   const [burstTime, setBurstTime] = useState("");
+  const [priority, setPriority] = useState("");
+  const [quantum, setQuantum] = useState("");
+
   const [processes, setProcesses] = useState([]);
   const [results, setResults] = useState([]);
   const [avgWT, setAvgWT] = useState(null);
   const [avgTAT, setAvgTAT] = useState(null);
 
+  // ---------------------------
+  // ADD PROCESS
+  // ---------------------------
   const addProcess = () => {
     if (!processName || arrivalTime === "" || burstTime === "") return;
 
@@ -17,42 +24,57 @@ export default function CPUScheduling() {
       name: processName,
       at: Number(arrivalTime),
       bt: Number(burstTime),
+      pr: Number(priority),
     };
 
     setProcesses([...processes, newProcess]);
     setProcessName("");
     setArrivalTime("");
     setBurstTime("");
+    setPriority("");
   };
 
-  const visualize = () => {
-    if (processes.length === 0) return;
-
+  // ---------------------------
+  // FCFS ALGORITHM
+  // ---------------------------
+  const runFCFS = () => {
     const sorted = [...processes].sort((a, b) => a.at - b.at);
 
-    let currentTime = 0;
+    let time = 0;
     let res = [];
     let totalWT = 0;
     let totalTAT = 0;
 
-    for (let p of sorted) {
-      let start = Math.max(currentTime, p.at);
+    sorted.forEach((p) => {
+      let start = Math.max(time, p.at);
       let finish = start + p.bt;
       let wt = start - p.at;
       let tat = finish - p.at;
 
       totalWT += wt;
       totalTAT += tat;
-
       res.push({ name: p.name, start, finish, wt, tat });
-      currentTime = finish;
-    }
+
+      time = finish;
+    });
 
     setResults(res);
     setAvgWT((totalWT / sorted.length).toFixed(2));
     setAvgTAT((totalTAT / sorted.length).toFixed(2));
   };
 
+  // ---------------------------
+  // MAIN EXECUTION
+  // ---------------------------
+  const visualize = () => {
+    if (processes.length === 0) return;
+
+    if (algorithm === "FCFS") runFCFS();
+
+    // other algorithms can be added here
+  };
+
+  // ---------------------------
   const resetAll = () => {
     setProcesses([]);
     setResults([]);
@@ -60,83 +82,117 @@ export default function CPUScheduling() {
     setAvgTAT(null);
   };
 
+  // ---------------------------
   return (
-    <div className="cpu-page">
-      <h1 className="page-title">CPU Scheduling • FCFS Visualizer</h1>
+    <div className="cpu-wrapper">
+      <h1 className="cpu-heading">CPU Scheduler: FCFS, SJF, RR, Priority</h1>
+      
+        {/* MAIN CARD */}
+      <div className="cpu-feature-card">
+        <div className="cpu-left">
+          <div className="cpu-role">
+            <span className="cpu-dot"></span> Scheduling Algorithms
+          </div>
 
-      <div className="page-layout">
-        {/* LEFT CARD */}
-        <div className="info-card glass-card">
-          <h3>FCFS Visualizer</h3>
-          <h1>First-Come, First-Served</h1>
-          <p>
-            Add processes (AT/BT), then visualize scheduling. The UI matches your
-            portfolio theme with soft glass backgrounds and neon accent colors.
+          <h2 className="cpu-title">{algorithm} Algorithm</h2>
+
+          <p className="cpu-description">
+            Add processes (Arrival Time / Burst Time), choose an algorithm, and visualize
+            the timeline with your portfolio’s neon-purple theme.
           </p>
+
+          {/* SELECT ALGO */}
+          <select
+            className="cpu-select"
+            value={algorithm}
+            onChange={(e) => setAlgorithm(e.target.value)}
+          >
+            <option value="FCFS">FCFS (First Come First Serve)</option>
+            <option value="SJF">SJF (Non-Preemptive)</option>
+            <option value="SJF_PRE">SJF (Preemptive)</option>
+            <option value="PRIORITY">Priority Scheduling</option>
+            <option value="RR">Round Robin</option>
+          </select>
         </div>
 
-        {/* RIGHT INPUT CARD */}
-        <div className="input-card glass-card">
-          <h3>Add Process</h3>
-
-          <div className="input-row">
+        {/* PROCESS INPUTS */}
+        <div className="cpu-right">
+          <div className="cpu-input-row">
             <input
               type="text"
-              placeholder="Process name (e.g. P1)"
+              placeholder="Process Name (e.g. P1)"
               value={processName}
               onChange={(e) => setProcessName(e.target.value)}
             />
 
             <input
               type="number"
-              placeholder="Arrival Time (AT)"
+              placeholder="AT"
               value={arrivalTime}
               onChange={(e) => setArrivalTime(e.target.value)}
             />
 
             <input
               type="number"
-              placeholder="Burst Time (BT)"
+              placeholder="BT"
               value={burstTime}
               onChange={(e) => setBurstTime(e.target.value)}
             />
 
-            <button className="add-btn" onClick={addProcess}>+ Add Task</button>
+            {/* Show priority only if needed */}
+            {algorithm === "PRIORITY" && (
+              <input
+                type="number"
+                placeholder="Priority"
+                value={priority}
+                onChange={(e) => setPriority(e.target.value)}
+              />
+            )}
+
+            {/* Quantum only for RR */}
+            {algorithm === "RR" && (
+              <input
+                type="number"
+                placeholder="Quantum"
+                value={quantum}
+                onChange={(e) => setQuantum(e.target.value)}
+              />
+            )}
+
+            <button className="cpu-add-btn" onClick={addProcess}>+ Add</button>
           </div>
 
-          <div className="queue-section">
+          <div className="cpu-queue">
             <h4>Process Queue</h4>
             {processes.length === 0 ? (
-              <p className="empty">No processes added yet.</p>
+              <p className="cpu-empty">No processes added</p>
             ) : (
               <ul>
                 {processes.map((p, i) => (
-                  <li key={i}>{p.name} — AT: {p.at}, BT: {p.bt}</li>
+                  <li key={i}>{p.name} — AT:{p.at}, BT:{p.bt} {p.pr ? `PR:${p.pr}` : ""}</li>
                 ))}
               </ul>
             )}
           </div>
 
-          <div className="btn-row">
-            <button className="visualize-btn" onClick={visualize}>▶ Visualize FCFS</button>
-            <button className="reset-btn" onClick={resetAll}>⟳ Reset All</button>
+          <div className="cpu-btn-row">
+            <button className="cpu-visualize" onClick={visualize}>▶ Visualize</button>
+            <button className="cpu-reset" onClick={resetAll}>⟳ Reset</button>
           </div>
         </div>
       </div>
 
       {/* GANTT CHART */}
-      <div className="gantt-card glass-card">
+      <div className="cpu-gantt-card">
         <h3>Gantt Chart</h3>
         {results.length === 0 ? (
-          <p className="empty">No timeline yet — click Visualize FCFS.</p>
+          <p className="cpu-empty">Run visualization to generate chart.</p>
         ) : (
-          <div className="gantt-bar">
+          <div className="cpu-gantt">
             {results.map((r, i) => (
-              <div key={i} className="gantt-block">
-                <span>{r.name}</span>
-                <small>
-                  {r.start} - {r.finish}
-                </small>
+              <div key={i} className="cpu-gantt-block">
+                <strong>{r.name}</strong>
+                <small>{r.start} - {r.finish}</small>
               </div>
             ))}
           </div>
@@ -144,26 +200,26 @@ export default function CPUScheduling() {
       </div>
 
       {/* RESULTS */}
-      <div className="results-section">
-        <div className="results-card glass-card">
+      <div className="cpu-results-section">
+        <div className="cpu-results-card">
           <h3>Process Results</h3>
           {results.length === 0 ? (
-            <p className="empty">No results — click Visualize.</p>
+            <p className="cpu-empty">No results yet</p>
           ) : (
             <ul>
               {results.map((r, i) => (
                 <li key={i}>
-                  {r.name}: WT = {r.wt}, TAT = {r.tat}
+                  {r.name} — WT: {r.wt} • TAT: {r.tat}
                 </li>
               ))}
             </ul>
           )}
         </div>
 
-        <div className="stats-card glass-card">
+        <div className="cpu-stats-card">
           <h3>Statistics</h3>
-          <div className="stat">Average Waiting Time: <span>{avgWT}</span></div>
-          <div className="stat">Average Turnaround Time: <span>{avgTAT}</span></div>
+          <p className="cpu-stat">Average Waiting Time: <span>{avgWT}</span></p>
+          <p className="cpu-stat">Average Turnaround Time: <span>{avgTAT}</span></p>
         </div>
       </div>
     </div>

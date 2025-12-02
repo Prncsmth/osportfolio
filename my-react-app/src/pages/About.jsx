@@ -103,49 +103,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* SKILLS SECTION */}
-        <div className="skills-section">
-          <h2 className="section-heading">SKILLS</h2>
-
-          <div className="skills-grid">
-            <div className="skill-card">
-              <h4>Problem Solving</h4>
-              <p>Analytical thinking and efficient debugging to tackle complex challenges.</p>
-              <div className="skill-level">90%</div>
-            </div>
-
-            <div className="skill-card">
-              <h4>Web Development</h4>
-              <p>Full-stack development with modern frameworks and best practices.</p>
-              <div className="skill-level">85%</div>
-            </div>
-
-            <div className="skill-card">
-              <h4>UI/UX Design</h4>
-              <p>Creating responsive, accessible, and visually appealing interfaces.</p>
-              <div className="skill-level">80%</div>
-            </div>
-
-            <div className="skill-card">
-              <h4>Database Design</h4>
-              <p>Designing efficient database structures and optimizing queries.</p>
-              <div className="skill-level">82%</div>
-            </div>
-
-            <div className="skill-card">
-              <h4>Team Collaboration</h4>
-              <p>Working effectively with teams and communicating technical concepts.</p>
-              <div className="skill-level">88%</div>
-            </div>
-
-            <div className="skill-card">
-              <h4>API Development</h4>
-              <p>Building robust and scalable REST APIs with proper documentation.</p>
-              <div className="skill-level">84%</div>
-            </div>
-          </div>
-        </div>
-
+       
         {/* EXPERIENCE */}
         <div className="experience-section">
           <h2 className="section-heading">EXPERIENCE</h2>

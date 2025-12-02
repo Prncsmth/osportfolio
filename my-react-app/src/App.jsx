@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Socials from "./pages/Socials";
 import Contact from "./pages/Contact";
-import CpuScheduling from "./pages/CpuScheduling";
+import CPUScheduling from "./pages/CpuScheduling";
 
 function App() {
   return (
@@ -23,16 +23,16 @@ function App() {
       >
         <Navbar />
 
-        {/* Main content */}
         <main style={{ flex: 1 }}>
           <Routes>
-            <Route path="/" element={<Home />} />       {/* FIXED */}
-            <Route path="/about" element={<About />} /> {/* FIXED */}
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/socials" element={<Socials />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/cpu-scheduling" element={<CpuScheduling />} />
 
+            {/* ✅ FIXED: Correct CPU Scheduling route */}
+            <Route path="/cpuscheduling" element={<CPUScheduling />} />
           </Routes>
         </main>
 
