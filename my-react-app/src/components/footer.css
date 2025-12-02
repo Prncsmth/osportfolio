@@ -74,7 +74,7 @@
 .social-links a:hover {
   background: rgba(255, 255, 255, 0.18);
   transform: translateY(-3px);
-  box-shadow: 0 0 12px rgba(180, 110, 255, 0.7);
+  box-shadow: 0 0 8px rgba(180, 110, 255, 0.4);
 }
 
 /* === ICON INSIDE SOCIAL/CONTACT === */
@@ -89,7 +89,7 @@
 .social-links a:hover .footer-icon,
 .footer-contact:hover .footer-icon {
   transform: scale(1.18);
-  filter: drop-shadow(0 0 6px #b471ff);
+  filter: drop-shadow(0 0 3px rgba(180, 113, 255, 0.5));
 }
 
 /* === CONTACT ROWS === */
@@ -116,7 +116,7 @@
 /* === LOCATION ICON HOVER === */
 .footer-col:hover svg {
   transform: scale(1.15);
-  filter: drop-shadow(0 0 5px #bb80ff);
+  filter: drop-shadow(0 0 2px rgba(187, 128, 255, 0.4));
   transition: 0.25s ease;
 }
 

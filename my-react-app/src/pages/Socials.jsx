@@ -4,7 +4,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 export default function Socials() {
   return (
     <div className="socials-page">
-      <h1 className="socials-title">Contact Me</h1>
+      <h1 className="socials-title">Connect With Me</h1>
       <p className="socials-subtext">You can find me on these platforms.</p>
 
       <div className="socials-grid">
