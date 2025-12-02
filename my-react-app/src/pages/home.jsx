@@ -45,7 +45,7 @@ export default function Home() {
         <div className="project-grid">
           <div className="project-card">
             <div className="project-img"></div>
-            <h3>CPU Scheduling Algorithm</h3>
+            <h3>E-COMMERCE WEB APPLICATION</h3>
             <p>A simulation tool for CPU scheduling methods.</p>
             <div className="tags"><span>Java</span><span>DSA</span></div>
           </div>

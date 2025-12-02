@@ -2,25 +2,25 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "CPU SCHEDULING ALGORITHM",
-    description: "A simulation tool for demonstrating CPU scheduling concepts.",
-    tags: ["Java", "Algorithms"],
-    img: "/images/project1.png",
-    link: "#",
+    title: "“Building Reusable React Components Using Props and List Rendering”",
+    description: "This project teaches how to create reusable React components that get their data from props. You’ll store multiple items in an array and use .map() to display them. It’s a practical way to learn how real websites show lists of products, posts, or users.",
+    tags: ["React", "JavaScript","CSS","GitHub"],
+    img: "/public/princesmith.jpg",
+    link: "https://github.com/Prncsmth/3a-apps-dev",
   },
   {
-    title: "WEB BASED CRUD PROJECT",
-    description: "CRUD web app for managing data efficiently.",
-    tags: ["PHP", "MySQL"],
-    img: "/images/project2.png",
-    link: "#",
+    title: "“React E-Commerce Web Application Using DummyJSON API”",
+    description: "This project requires building a React-based online shop that gets product data from the DummyJSON API. Users should be able to view all products, open a product’s details, use search and filters, and manage a cart up to checkout.",
+    tags: ["React", "JavaScript", "JSX", "CSS (or Tailwind)", "API", "GitHub", "Vercel"],
+    img: "/public/rcs.jpg",
+    link: "https://github.com/carlacarla-29/APPS-DEV",
   },
   {
-    title: "AUTOMATIC WHITEBOARD ERASER",
-    description: "Robotics project designed to clean whiteboards automatically.",
-    tags: ["Arduino", "Robotics"],
-    img: "/images/project3.png",
-    link: "#",
+    title: "Profile Page",
+    description: "A user-centered profile page that highlights essential personal information while maintaining a balanced visual hierarchy. The design uses consistent spacing, typography, and color to deliver a clear, intuitive, and aesthetically pleasing user experience.",
+    tags: ["Figma","React", "HTML/JSX", "CSS"],
+    img: "/public/saw.jpg",
+    link: "https://github.com/Prncsmth/React-Activity-1",
   },
 ];
 

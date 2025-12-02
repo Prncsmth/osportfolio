@@ -72,7 +72,7 @@ export default function About() {
 
         {/* TECH STACK */}
         <div className="tech-section">
-          <h2 className="section-heading">🛠 Tech Stacks</h2>
+          <h2 className="section-heading">TECH STACK</h2>
 
           <div className="tech-category">
             <h4>Frontend</h4>
@@ -108,7 +108,7 @@ export default function About() {
 
         {/* SKILLS SECTION */}
         <div className="skills-section">
-          <h2 className="section-heading">💡 Core Skills</h2>
+          <h2 className="section-heading">SKILLS</h2>
           
           <div className="skills-grid">
             <div className="skill-card">
@@ -151,7 +151,7 @@ export default function About() {
 
         {/* EXPERIENCE */}
         <div className="experience-section">
-          <h2 className="section-heading">📌 Experience</h2>
+          <h2 className="section-heading">EXPERIENCE</h2>
 
           <div className="timeline">
             <div className="timeline-item">
