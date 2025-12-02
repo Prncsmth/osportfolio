@@ -45,21 +45,29 @@
 /* LEFT TEXT SECTION */
 .project-text {
   flex: 1.2;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-dot {
   height: 10px;
   width: 10px;
-  background-color: #b480ff;
+  background: linear-gradient(135deg, #dcbcff, #b480ff);
   border-radius: 50%;
   display: inline-block;
   margin-right: 8px;
+  box-shadow: 0 0 8px rgba(180, 128, 255, 0.4);
+  flex-shrink: 0;
 }
 
 .project-role {
-  opacity: 0.7;
+  opacity: 0.85;
   font-size: 0.9rem;
   letter-spacing: 1px;
+  color: #dcbcff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .project-title {
@@ -138,4 +146,95 @@
 .project-image img:hover {
   opacity: 1;
   box-shadow: 0px 0px 35px rgba(180, 128, 255, 0.4);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1024px) {
+  .project-feature-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .project-text {
+    flex: 1;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+
+  .project-image img {
+    max-width: 400px;
+  }
+
+  .project-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-wrapper {
+    padding: 3rem 1.5rem;
+  }
+
+  .projects-heading {
+    font-size: 2rem;
+  }
+
+  .project-feature-card {
+    padding: 2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-view {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .project-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .projects-heading {
+    font-size: 1.5rem;
+  }
+
+  .project-feature-card {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+  }
+
+  .project-view {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .project-image img {
+    max-width: 100%;
+    height: auto;
+  }
 }

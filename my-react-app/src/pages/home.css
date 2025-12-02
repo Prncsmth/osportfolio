@@ -1,27 +1,8 @@
-/* === HOME PAGE UA WORLDWIDE STYLE === */
+/* === HOME PAGE STYLES === */
 
-:root {
-  --primary: darkviolet;        /* UA accent */
-  --primary-hover: violet;  /* UA accent hover */
-  --text-dark: white;      /* main text */
-  --text-light: #555555;     /* subtitles */
-  --bg-light: #fdfdfd;       /* page background */
-  --card-bg: linear-gradient(135deg, #0d001a, #3b0066);      /* card background */
-  --radius: 12px;
-  --shadow-light: rgba(0,0,0,0.08);
-  --shadow-hover: rgba(0,0,0,0.15);
-  
-}
-.home-page{
+.home-page {
   padding: 60px 8%;
-  background:  #0e1217;
-}
-body {
-  font-family: "Inter", sans-serif;
-  background: var(--bg-light);
-  color: var(--text-dark);
-  margin: 0;
-  padding: 0;
+  background: #0e1217;
 }
 
 /* ===== HERO SECTION ===== */
@@ -123,22 +104,29 @@ body {
 }
 
 .btn.primary {
-  background: var(--primary);
-  color: black;
+  background: linear-gradient(135deg, #dcbcff, #b480ff);
+  color: #0e1217;
+  border: none;
 }
 
 .btn.primary:hover {
-  background: var(--primary-hover);
+  background: linear-gradient(135deg, #e8d4ff, #c299ff);
+  box-shadow: 0 0 15px rgba(180, 128, 255, 0.4);
+  transform: translateY(-2px);
 }
 
 .btn.outline {
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  border: 2px solid #b480ff;
+  color: #dcbcff;
+  background: transparent;
 }
 
 .btn.outline:hover {
-  background: var(--primary);
-  color: black;
+  background: linear-gradient(135deg, rgba(220, 188, 255, 0.1), rgba(180, 128, 255, 0.1));
+  border-color: #dcbcff;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(180, 128, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 /* ===== HERO IMAGE ===== */
@@ -222,19 +210,6 @@ body {
 }
 
 /* LEFT TEXT AREA */
-.project-content {
-  max-width: 60%;
-}
-
-.project-role {
-  font-size: 15px;
-  color: #9effba;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .project-card h3 {
   font-size: 32px;
   color: white;
@@ -257,20 +232,6 @@ body {
   margin-right: 6px;
   border-radius: 6px;
   backdrop-filter: blur(6px);
-}
-
-/* View Project Button */
-.view-btn {
-  margin-top: 25px;
-  display: inline-block;
-  color: #7efff5;
-  font-weight: 600;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.view-btn:hover {
-  color: #ffffff;
 }
 
 /* View All Projects Button */
@@ -299,16 +260,6 @@ body {
 
 .view-all:active {
   transform: translateY(0);
-}
-
-/* RIGHT IMAGE SIDE */
-.project-img-preview {
-  width: 38%;
-  height: 200px;
-  border-radius: 20px;
-  background: #000;
-  object-fit: cover;
-  border: 1px solid rgba(255,255,255,0.15);
 }
 
 /* === RESPONSIVE DESIGN === */
@@ -451,10 +402,6 @@ body {
     margin-bottom: 15px;
   }
 
-  .wave {
-    font-size: 28px;
-  }
-
   .subtitle {
     font-size: 14px;
     margin-bottom: 20px;
@@ -499,11 +446,6 @@ body {
   .project-card {
     padding: 20px;
     flex-direction: column;
-  }
-
-  .project-img {
-    width: 100%;
-    height: 150px;
   }
 
   .project-card h3 {

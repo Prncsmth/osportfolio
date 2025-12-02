@@ -1,5 +1,5 @@
 import "./About.css";
-import { FaGithub, FaTwitter, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function About() {
   const handleResumeDownload = () => {
@@ -46,16 +46,16 @@ export default function About() {
             <div className="info-grid">
               <div className="info-group">
                 <h4>Socials</h4>
-                <p><FaGithub /> Prncsmth</p>
-                <p><FaTwitter /> Twitter</p>
-                <p><FaFacebook /> Smith Degamo</p>
+                <p><FaGithub /> : Prncsmth</p>
+                <p><FaInstagram /> : swishsmith_</p>
+                <p><FaFacebook /> : Smith Degamo</p>
               </div>
 
               <div className="info-group">
                 <h4>Contact</h4>
-                <p><FaEnvelope /> smithdegamo@gmail.com</p>
-                <p><FaPhone /> +63 912 345 6789</p>
-                <p><FaMapMarkerAlt /> Cebu, Philippines</p>
+                <p><FaEnvelope /> : smithdegamo@gmail.com</p>
+                <p><FaPhone /> : +63 912 345 6789</p>
+                <p><FaMapMarkerAlt /> : Cebu, Philippines</p>
               </div>
             </div>
 
