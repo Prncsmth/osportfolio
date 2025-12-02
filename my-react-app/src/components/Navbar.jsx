@@ -9,9 +9,9 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
 
-        <div className="nav-logo">
+        <Link to="/" className="nav-logo">
           MYPORTFOLIO
-        </div>
+        </Link>
 
         <div className="nav-toggle" onClick={() => setOpen(!open)}>
           ☰

@@ -1,72 +1,189 @@
+/* === NAVBAR MAIN === */
 .navbar {
   width: 100%;
-  padding: 20px 0;
-  background: white;
-  backdrop-filter: blur(8px);
+  padding: 18px 0;
+  background: #0e1217;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
+/* === NAV CONTAINER === */
 .nav-container {
   max-width: 1250px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* === LOGO === */
 .nav-logo {
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #d1a3ff, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
+.nav-logo:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+/* === NAV LINKS === */
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 32px;
 }
 
 .nav-links a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Underline hover effect */
+.nav-links a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #c08aff;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s ease;
+  border-radius: 2px;
 }
 
 .nav-links a:hover {
-  color: #b266ff;
+  opacity: 1;
+  color: #e4c3ff;
 }
 
-/* Mobile Menu Button */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* === MOBILE MENU TOGGLE BUTTON === */
 .nav-toggle {
   display: none;
-  color: white;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: #e4c3ff;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Responsive */
+.nav-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* === RESPONSIVE NAVIGATION === */
 @media (max-width: 850px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+
   .nav-toggle {
     display: block;
+    font-size: 1.8rem;
+    color: #e4c3ff;
+    cursor: pointer;
+    transition: 0.3s;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .nav-toggle:hover {
+    transform: scale(1.1);
   }
 
   .nav-links {
     position: absolute;
-    top: 80px;
+    top: 70px;
     right: 0;
-    background: rgba(20, 0, 35, 0.9);
     width: 100%;
     padding: 25px 0;
+    background: rgba(14, 18, 23, 0.98);
+    backdrop-filter: blur(10px);
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
     display: none;
+    animation: fadeDown 0.3s ease forwards;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-links.open {
     display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+
+  .nav-links a::after {
+    height: 1px;
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .nav-container {
+    padding: 0 12px;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-toggle {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    top: 60px;
+    padding: 15px 0;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+
+/* === Mobile Fade Animation === */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -8,8 +8,10 @@ export default function Home() {
       <section className="hero">
         <div className="hero-container">
           <div className="hero-text">
-            <div className="status-dot"></div>
-            <p className="status-text">Message me</p>
+            <div className="status-badge">
+              <div className="status-dot"></div>
+              <p className="status-text">Message me</p>
+            </div>
             
             <h1 className="title">
               Hey, I'm Smith <span className="wave">👋</span>

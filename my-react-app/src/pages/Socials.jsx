@@ -1,9 +1,10 @@
 import "./Socials.css";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Socials() {
   return (
     <div className="socials-page">
-      <h1 className="socials-title">Connect With Me</h1>
+      <h1 className="socials-title">Contact Me</h1>
       <p className="socials-subtext">You can find me on these platforms.</p>
 
       <div className="socials-grid">
@@ -14,7 +15,7 @@ export default function Socials() {
           rel="noopener noreferrer"
           className="social-card"
         >
-          <h3>Facebook</h3>
+          <div className="social-icon"><FaFacebook /></div>
           <p>smithdegamox2</p>
         </a>
 
@@ -24,7 +25,7 @@ export default function Socials() {
           rel="noopener noreferrer"
           className="social-card"
         >
-          <h3>GitHub</h3>
+          <div className="social-icon"><FaGithub /></div>
           <p>Prncsmth</p>
         </a>
 
@@ -34,7 +35,7 @@ export default function Socials() {
           rel="noopener noreferrer"
           className="social-card"
         >
-          <h3>Instagram</h3>
+          <div className="social-icon"><FaInstagram /></div>
           <p>@swishsmith_</p>
         </a>
 
@@ -44,7 +45,7 @@ export default function Socials() {
           rel="noopener noreferrer"
           className="social-card"
         >
-          <h3>LinkedIn</h3>
+          <div className="social-icon"><FaLinkedin /></div>
           <p>Smith Degamo</p>
         </a>
 

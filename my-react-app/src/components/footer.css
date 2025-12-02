@@ -1,116 +1,143 @@
+/* === FOOTER MAIN WRAPPER === */
 .site-footer {
-  background: white;
-    padding: 40px 20px;
-  font-family: sans-serif;
- 
+  background: linear-gradient(135deg, #0a0016, #3f0073);
+  padding: 60px 20px;
+  font-family: "Inter", sans-serif;
+  color: #f0d9ff;
 }
 
+/* === CONTAINER === */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto;
-}
-/* Location icon & text */
-.footer-col svg,
-.footer-col p {
-  color: black;   /* applies to stroke for SVG and text color */
-  fill: black;    /* fills the SVG if it has fill */
-  vertical-align: middle; /* aligns with text nicely */
-  margin-right: 6px; /* spacing between icon and text */
+  margin: auto;
 }
 
-/* Optional: Hover effect for location like socials */
-.footer-col:hover svg {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 6px #b471ff);
-  transition: transform 0.2s, filter 0.2s;
-}
-
+/* === COLUMN TITLES === */
 .footer-col h4 {
-  color: black;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  text-decoration: none;  
-  stroke: black;   /* outline icons */
-  fill: black;     /* filled icons */
-  margin-right: 100px;
-  margin-top: 10px;
-
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e2c7ff;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
 }
 
-.footer-links,
-.social-links :hover {
+/* === LINKS LIST === */
+.footer-links {
   list-style: none;
   padding: 0;
- color: #b471ff;
-   
-};
+  margin: 0;
+}
 
+.footer-links li {
+  margin-bottom: 12px;
+}
 
-.footer-links li,
+.footer-links li a {
+  color: #e8d9ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-links li a:hover {
+  color: #d9a6ff;
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(220, 150, 255, 0.7);
+  transform: translateX(4px);
+}
+
+/* === SOCIAL LINKS === */
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 5px;
+}
+
 .social-links a {
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
-  color: black;
-  text-decoration: none;
-  gap: 8px;
-  
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  transition: 0.3s ease;
 }
 
-.footer-links li a:hover 
 .social-links a:hover {
-  color: #b471ff;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(180, 110, 255, 0.7);
 }
 
+/* === ICON INSIDE SOCIAL/CONTACT === */
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #e8c3ff;
+  fill: #e8c3ff;
+  transition: 0.25s ease;
+}
+
+.social-links a:hover .footer-icon,
+.footer-contact:hover .footer-icon {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 6px #b471ff);
+}
+
+/* === CONTACT ROWS === */
 .footer-contact {
   display: flex;
   align-items: center;
-  gap: 8px;
-  height: 20px;
-font-size: medium;
- 
-  color: black;
-  
-  
+  gap: 10px;
+  color: #e8d9ff;
+  margin-bottom: 10px;
+  opacity: 0.9;
 }
+
 .footer-contact a {
-  color: black; 
-  text-decoration: none;  
-  stroke: #b471ff;   /* outline icons */
-  fill: #b471ff;     /* filled icons */
-  
-}
-.footer-icon {
-  width: 20px;       /* icon size matches text */
-  height: 20px;
-  stroke: #b471ff;   /* outline icons */
-  fill: #b471ff;     /* filled icons */
-  transition: transform 0.2s, filter 0.2s; /* smooth animation */
-  vertical-align: middle;
-  
+  color: #e8d9ff;
+  text-decoration: none;
+  font-size: 0.97rem;
+  transition: 0.3s ease;
 }
 
-/* Hover effect for all icons */
-.footer-contact:hover .footer-icon,
-.social-links a:hover .footer-icon {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 6px #b471ff);
+.footer-contact a:hover {
+  color: #d8afff;
 }
 
-
-/* Hover effect for social icons */
-.social-links a:hover .footer-icon {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 6px #b471ff);
+/* === LOCATION ICON HOVER === */
+.footer-col:hover svg {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 5px #bb80ff);
+  transition: 0.25s ease;
 }
 
-.footer-bottom  p{
+/* === BOTTOM TEXT === */
+.footer-bottom p {
   text-align: center;
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: black;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  color: #f0d9ff;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 850px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
 }
