@@ -128,7 +128,7 @@ export default function About() {
             <div className="timeline-item">
               <div className="dot"></div>
               <div>
-                <h4>First line of code 👶</h4>
+                <h4>First line of code </h4>
                 <p>2023</p>
               </div>
             </div>
