@@ -30,6 +30,7 @@ export default function Footer() {
             <li><a href="/projects">Projects</a></li>
             <li><a href="/socials">Socials</a></li>
             <li><a href="/contact">Contact</a></li>
+            <li><a href="/cpuscheduling">CPU Scheduling</a></li>
           </ul>
         </div>
 
