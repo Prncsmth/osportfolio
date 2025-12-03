@@ -38,10 +38,10 @@ export default function Home() {
       {/* PROJECTS */}
       <section className="projects">
         <p className="section-label">Recent Projects</p>
-        <h2 className="section-title">Check out my recent work</h2>
+        <h2 className="section-title">Check out my Recent Projects</h2>
         <p className="section-sub">
           I've worked on various projects — from simple websites to fully functional web applications.
-          Here are a few favorites.
+        
         </p>
 
         

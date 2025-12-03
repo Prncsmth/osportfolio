@@ -27,7 +27,7 @@ const projects = [
 export default function Projects() {
   return (
     <div className="projects-wrapper">
-      <h1 className="projects-heading">CHECK OUT MY RECENT PROJECTS</h1>
+      <h1 className="projects-heading">MY RECENT PROJECTS</h1>
       <p className="projects-sub">
         I've worked on various projects — from simple websites to fully functional web applications. Here are a few favorites.
       </p>
