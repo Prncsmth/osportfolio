@@ -97,8 +97,8 @@ export default function CPUScheduling() {
           <h2 className="cpu-title">{algorithm} Algorithm</h2>
 
           <p className="cpu-description">
-            Add processes (Arrival Time / Burst Time), choose an algorithm, and visualize
-            the timeline with your portfolio’s neon-purple theme.
+            Add processes (Arrival Time / Burst Time), choose an algorithm, and visualize.
+           
           </p>
 
           {/* SELECT ALGO */}
