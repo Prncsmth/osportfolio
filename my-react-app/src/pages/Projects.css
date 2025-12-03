@@ -1,11 +1,11 @@
-/* PAGE WRAPPER */
+/* === PAGE WRAPPER === */
 .projects-wrapper {
   padding: 5rem 2rem;
   background-color: #0e1217;
   color: white;
 }
 
-/* TOP HEADING */
+/* === TOP HEADING === */
 .projects-heading {
   text-align: center;
   font-size: 2.5rem;
@@ -21,7 +21,7 @@
   margin-bottom: 4rem;
 }
 
-/* PROJECT FEATURE CARD */
+/* === PROJECT FEATURE CARD === */
 .project-feature-card {
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,7 @@
   box-shadow: 0px 0px 40px rgba(180, 128, 255, 0.3);
 }
 
-/* LEFT TEXT SECTION */
+/* === LEFT TEXT SECTION === */
 .project-text {
   flex: 1.2;
   display: flex;
@@ -83,7 +83,7 @@
   line-height: 1.6;
 }
 
-/* TAGS */
+/* === TAGS === */
 .project-tags {
   margin-top: 1.5rem;
 }
@@ -99,7 +99,7 @@
   color: #dcbcff;
 }
 
-/* VIEW LINK */
+/* === VIEW LINK === */
 .project-view {
   margin-top: 2rem;
   display: inline-block;
@@ -126,7 +126,7 @@
   transform: translateX(2px);
 }
 
-/* IMAGE SECTION */
+/* === IMAGE SECTION (Responsive) === */
 .project-image {
   flex: 1;
   display: flex;
@@ -135,7 +135,8 @@
 
 .project-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 500px; /* max size on large screens */
+  height: auto;
   border-radius: 12px;
   border: 2px solid rgba(255,255,255,0.15);
   box-shadow: 0px 0px 25px rgba(160, 40, 255, 0.35);
@@ -149,19 +150,13 @@
 }
 
 /* === RESPONSIVE DESIGN === */
+
+/* Tablets / Laptops */
 @media (max-width: 1024px) {
   .project-feature-card {
     flex-direction: column;
     text-align: center;
     padding: 2.5rem 2rem;
-  }
-
-  .project-text {
-    flex: 1;
-  }
-
-  .project-image {
-    width: 100%;
   }
 
   .project-image img {
@@ -173,6 +168,7 @@
   }
 }
 
+/* Large Mobile */
 @media (max-width: 768px) {
   .projects-wrapper {
     padding: 3rem 1.5rem;
@@ -203,6 +199,7 @@
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .projects-wrapper {
     padding: 2rem 1rem;
